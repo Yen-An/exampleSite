@@ -22,7 +22,7 @@ tags : [
 
 在postman的結果，很正常，
 
-![image-20220620112657719](./image-20220620112657719.png)
+![image-20220620112657719](image-20220620112657719.png)
 
 
 
@@ -35,7 +35,7 @@ tags : [
 
 結果出現了錯誤訊息，上面寫的要在我們發送請求時加上 `mode:'no-cors'`
 
-![image-20220620113142449](./image-20220620113142449.png)
+![image-20220620113142449](image-20220620113142449.png)
 
 於是我加上了
 
@@ -70,23 +70,23 @@ https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgc
 
 我將他安裝在我的瀏覽器，並按下左下角的toggle on ，
 
-![image-20220620120541439](./image-20220620120541439.png)
+![image-20220620120541439](image-20220620120541439.png)
 
 
 
 然後回到我的程式碼，將 `mode:'no-cors'` 拿掉，再去到開發者工具看看這次回傳什麼，
 
-![image-20220620120935256](./image-20220620120935256.png)
+![image-20220620120935256](image-20220620120935256.png)
 
 可以看到我的 Response type 已經是 cors，但body依舊怪怪的？沒有我要的data，
 
 接著我利用插件的 Test Cors來檢查我的瀏覽器到底可以接受怎樣的跨域請求，
 
-![image-20220620121125924](./image-20220620121125924.png)
+![image-20220620121125924](image-20220620121125924.png)
 
 可以看到我的fetch通通都是被拒絕的，但是，XMLHttpRequest的 GET & POST都是被允許的，
 
-![image-20220620121206852](./image-20220620121206852.png)
+![image-20220620121206852](image-20220620121206852.png)
 
 
 
@@ -99,7 +99,7 @@ https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgc
 
 讓我們再回到開發者工具看看，
 
-![image-20220620121608868](./image-20220620121608868.png)
+![image-20220620121608868](image-20220620121608868.png)
 
 這次成功的回傳了api所提供的data!!!!!
 
